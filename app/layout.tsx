@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+      <div className="grid grid-cols-12 min-h-screen grid-rows-[auto_1fr]">
+          <div id="header" className="col-span-12 border-b-2 border-black">
+              <h1 className="text-6xl font-bold text-center m-2">My Game of Thrones character app</h1>
+          </div>
+          <div id="navbar" className="p-2 border-r-2 border-black col-span-2 flex flex-col gap-2">
+              <Link href="/books">Books</Link>
+              <Link href="/characters">Characters</Link>
+              <Link href="/books">Houses</Link>
+          </div>
+          {children}
+      </div>
       </body>
     </html>
   );
