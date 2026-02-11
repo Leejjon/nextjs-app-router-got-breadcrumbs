@@ -36,6 +36,7 @@ export default async function Characters({searchParams}: { searchParams: Promise
                             <p>Name: {character.name}</p>
                             <p>Gender: {character.gender}</p>
                             <p>Culture: {character.aliases.length > 0 ? character.aliases[0] : 'None'}</p>
+                            <Link type="button" href={`/characters/${id}`} className="bg-gray-300 border-1 border-black rounded-md p-1 my-1 w-25 inline-block">View details</Link>
                         </div>
                     );
                 })}
