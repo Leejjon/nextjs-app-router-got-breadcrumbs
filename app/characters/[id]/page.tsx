@@ -43,11 +43,11 @@ export default async function CharacterPage(props: CharacterPageProps) {
                 <p><b>Died:</b> {character.died}</p>
                 <p><b>Titles:</b></p>
                 <ul>
-                    {character.titles.map((title) => <li>- {title}</li>)}
+                    {character.titles.map((title) => <li key={`title${title}`}>- {title}</li>)}
                 </ul>
                 <p><b>Aliases:</b></p>
                 <ul>
-                    {character.aliases.map((alias) => <li>- {alias}</li>)}
+                    {character.aliases.map((alias) => <li key={`alias${alias}`}>- {alias}</li>)}
                 </ul>
                 <p><b>Father:</b> {character.father.split('/').at(-1)}</p>
                 <p><b>Mother:</b> {character.mother.split('/').at(-1)}</p>
