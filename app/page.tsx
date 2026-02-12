@@ -1,5 +1,6 @@
-import {redirect} from "next/navigation";
 
 export default function Home() {
-    redirect('/characters');
+    return (
+        <>In this web app you can browse through the 'A Song of Ice and Fire' API.</>
+    );
 }

@@ -26,7 +26,7 @@ export default async function Characters({searchParams}: { searchParams: Promise
         const characters = await response.json() as Character[];
 
         return (
-            <div id="content" className="col-span-10 p-2">
+            <>
                 <h2 className="text-2xl font-bold">Characters</h2>
                 <p className="mb-3">A list of all characters:</p>
                 {characters.map((character) => {
@@ -53,7 +53,7 @@ export default async function Characters({searchParams}: { searchParams: Promise
                           href={page ? `/characters?page=${+page + 1}` : "/characters?page=2"}>Next
                     </Link>
                 </div>
-            </div>
+            </>
         );
     } else {
         return (

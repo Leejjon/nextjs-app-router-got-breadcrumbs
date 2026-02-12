@@ -35,7 +35,7 @@ export default async function CharacterPage(props: CharacterPageProps) {
         const character = await response.json() as CharacterDetails;
         const id = character.url.split('/').at(-1);
         return (
-            <div id="content" className="col-span-10 p-2">
+            <>
                 <h2 className="text-2xl font-bold">{character.name}</h2>
                 <p><b>Gender:</b> {character.gender}</p>
                 <p><b>Culture:</b> {character.culture}</p>
@@ -77,11 +77,11 @@ export default async function CharacterPage(props: CharacterPageProps) {
                       className="bg-gray-300 border-1 border-black rounded-md p-2 m-1 w-40"
                       href="../characters">Back to characters
                 </Link>
-            </div>
+            </>
         );
     } else {
         return (
-            <div>Could not load character. Go back to <Link href="/characters">character</Link>s.</div>
+            <>Could not load character. Go back to <Link href="/characters">character</Link>s.</>
         );
     }
 }
