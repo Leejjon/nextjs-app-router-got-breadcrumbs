@@ -2,6 +2,7 @@ import type {Metadata} from "next";
 import "./globals.css";
 import Link from 'next/link';
 import {ReactNode} from "react";
+import ServerBreadcrumbs from "@/components/server-breadcrumbs";
 
 export const metadata: Metadata = {
     title: "My Game of Thrones character app",
@@ -27,6 +28,7 @@ export default function RootLayout({
                 <Link href="/books">Houses</Link>
             </div>
             <div id="content" className="col-span-10 p-2">
+                <ServerBreadcrumbs/>
                 {children}
             </div>
         </div>
