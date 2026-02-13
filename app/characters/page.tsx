@@ -57,7 +57,7 @@ export default async function Characters({searchParams}: { searchParams: Promise
         );
     } else {
         return (
-            <div>Could not load characters.</div>
+            <>Could not load characters.</>
         );
     }
 }
